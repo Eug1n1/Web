@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab_1</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="text" class="responseText">
+            <div class="text">Text...</div>
+        </div>
+        <input id="btn" type="button" value="Click">
+    </div>
+    <script>
+        var textArea = document.getElementById('text');
+
+        window.addEventListener("load", function () {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'hello.php', true);
+            request.addEventListener('readystatechange', function () {
+                if ((request.readyState == 4) && (request.status == 200)) {
+                    console.log("loaded")
+                    textArea.innerHTML = request.responseText;
+                }
+            });
+            request.send();
+        });
+
+        var btn = document.getElementById('btn');
+
+        btn.addEventListener("click", function () {
+            var request = new XMLHttpRequest();
+            request.open('POST', 'task.php', true);
+            console.log("click");
+
+            request.addEventListener('readystatechange', function () {
+                if ((request.readyState == 4) && (request.status == 200)) {
+                    console.log(request.responseText)
+                    textArea.innerHTML = request.responseText;
+                }
+            })
+
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            request.send();
+        })
+
+
+    </script>
+
+</body>
+
+</html>

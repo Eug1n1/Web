@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>lab_1</title>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="text" class="responseText">
+            <div class="text">Text from file...</div>
+        </div>
+        <form name="form1">
+            <select name="callbacks">
+                <option value="callbackScript">callbackScript</option>
+                <option value="callbackScript2">callbackScript2</option>
+            </select>
+        </form>
+        <input id="btn" type="button" value="Click">
+    </div>
+    <script>
+        var textArea = document.getElementById('text');
+        var sel = form1.callbacks;
+        var btn = document.getElementById('btn');
+
+        btn.addEventListener("click", () => {
+            callbackScriptsHandler();
+        })
+
+        function callbackScriptsHandler() {
+            var text = sel.options[sel.selectedIndex].value;
+            if (text === "callbackScript") {
+                console.log(text);
+                callbackScript();
+            } else {
+                console.log(text);
+                callbackScript2();
+            }
+        }
+
+        function callbackScript() {
+            write(syncRequest(), consoleWrite);
+        }
+
+        function callbackScript2() {
+            write(syncRequest("time.php"), () => {
+                var win = window.open("win.html", "hello", "width=200,height=100");
+            });
+        }
+
+        function syncRequest(url = 'text.txt') {
+            var response = "";
+            $.ajax({
+                type: 'GET',
+                url: url,
+                timeout: 15000,
+                async: false,
+                success: function (data) {
+                    response = data;
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    textArea.innerHTML = "Error!"
+                }
+            });
+            return response;
+        }
+
+        function write(text, callback) {
+            textArea.innerHTML = text;
+            callback(text)
+        }
+
+        function consoleWrite(text) {
+            console.log(text);
+        }
+    </script>
+</body>
+
+</html>

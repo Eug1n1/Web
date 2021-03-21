@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>lab_4</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="time">
+            Current time:
+        </div>
+        <div id="text" class="responseText">
+            <div class="text">Time</div>
+        </div>
+    </div>
+    <script>
+
+        var textArea = document.getElementById('text');
+        window.addEventListener("load", update);
+
+        function sendRequest() {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'time.php', false);
+            request.send();
+            if ((request.readyState == 4) && (request.status == 200)) {
+                console.clear();
+                console.log(request.responseText)
+                return request.responseText;
+            }
+
+            return null;
+        }
+
+        async function requestHandler() {
+            var response = sendRequest();
+            if (response != null) {
+                textArea.innerHTML = response;
+            }
+        }
+
+        function update() {
+            requestHandler();
+            setInterval(requestHandler, 1000)
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

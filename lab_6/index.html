@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>lab_6</title>
+</head>
+
+<body>
+
+    <script>
+
+        // ##### 6 #####
+
+        console.log("##### 6 #####")
+
+
+        // ----- 1 -----
+
+        // create js object 
+        var arr = [1, 2, 3, 4];
+        var jsObject = { name: "egor", age: 10, marks: arr };
+        // covert object to JSON
+        var str = JSON.stringify(jsObject, null, 4);
+
+        console.log(str);
+        // parse js object from JSON
+        var obj = JSON.parse(str);
+
+        console.log(obj);
+
+        // ----- 2 -----
+
+        // create string array
+        var words = ['Anton', 'jenya', 'tihomey', 'nikita', 'anod'];
+        // convert array to JSON
+        var jsonWords = JSON.stringify(words);
+
+        console.log(jsonWords);
+        // desirealize object from JSON
+        var desWords = JSON.parse(jsonWords);
+
+        console.log(desWords);
+
+        // select string started from 'A' and display it
+        desWords.forEach(element => {
+            if (element[0] === 'A') {
+                console.log(element);
+            }
+        });
+
+    </script>
+</body>
+
+</html>

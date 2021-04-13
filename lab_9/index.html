@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>lab_9</title>
+</head>
+
+<body>
+
+    <div class="text" id="text"></div>
+
+    <script>
+
+        var intArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        console.log(intArr);
+
+        var strArr = new Array();
+
+        intArr.forEach(e => {
+            strArr.push(e.toString(2));
+        });
+
+        console.log(strArr);
+
+        var intDecArr = new Array();
+
+        strArr.forEach(e => {
+            intDecArr.push(parseInt(e, 2));
+        });
+
+        console.log(intDecArr);
+
+        document.getElementById('text').innerHTML = intDecArr;
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>lab_6</title>
+</head>
+
+<body>
+
+    <input type="file" id="file">
+    <button onclick="readFile(document.getElementById('file'))">Read!</button>
+
+    <script>
+
+
+        // ##### 7 #####
+
+        function readFile(object) {
+
+            console.log("##### 7 #####")
+
+            var file = object.files[0]
+            var reader = new FileReader()
+            reader.onload = function () {
+                var parsed = JSON.parse(reader.result);
+                console.log(parsed);
+
+                console.log(parsed[6].title);
+                console.log(parsed[7].title);
+                console.log(parsed[8].title);
+            }
+            reader.readAsText(file);
+        }
+
+    </script>
+</body>
+
+</html>

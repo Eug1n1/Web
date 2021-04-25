@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Статья Bootstrap </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>  -->
+</head>
+
+<body>
+    <h1>Привет, мир!</h1>
+
+    <div class="alert alert-success" role="alert">Отлично!Так держать </div>
+    <div class="alert alert-info" role="alert">Подсказка!Тут должна быть важная информация</div>
+    <div class="alert alert-warning" role="alert">Warning!Будь внимательнее </div>
+    <div class="alert alert-danger" role="alert">Ошибка!Сервер недоступен </div>
+
+
+    <ul class="pagination pagination-lg">
+        <li class="page-item"><a href="#" class="page-link">&laquo;</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+    </ul>
+
+
+    <button type="button" class="btn btn-default">Кнопка</button>
+    <button type="button" class="btn btn-primary">Основная</button>
+    <button type="button" class="btn btn-success">Успех</button>
+    <button type="button" class="btn btn-info">Информация</button>
+    <button type="button" class="btn btn-warning">Внимание</button>
+    <button type="button" class="btn btn-danger">Ошибка</button>
+    <button type="button" class="btn btn-link">Ссылка</button>
+
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Почта</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Иван</td>
+                <td>Николайчук</td>
+                <td>ivan@example.com</td>
+            </tr>
+            <tr>
+                <td>Мария</td>
+                <td>Иванова</td>
+                <td>mary@example.com</td>
+            </tr>
+            <tr>
+                <td>Юлия</td>
+                <td>Петренко</td>
+                <td>julia@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-default">Кнопка</button>
+        <div class="dropdown">
+            <button type="button" data-toggle="dropdown" id="dropdownMenuButton"
+                class="btn btn-default dropdown-toggle">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Пункт 1</a></li>
+                <li><a class="dropdown-item" href="#">Пункт 2</a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Пункт 3</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- TASK 2 -->
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover table-sm">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Почта</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-primary">
+                    <td>Иван</td>
+                    <td>Николайчук</td>
+                    <td>ivan@example.com</td>
+                </tr>
+                <tr>
+                    <td class="table-success">Мария</td>
+                    <td class="table-warning">Иванова</td>
+                    <td class="table-danger">mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>Юлия</td>
+                    <td>Петренко</td>
+                    <td>julia@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- TASK 3 -->
+    <button class="btn btn-success btn-sm">button</button>
+    <button class="btn btn-success btn-md">button</button>
+    <button class="btn btn-success btn-lg">button</button>
+    <button class="btn btn-success btn-lg active">button</button>
+    <button class="btn btn-success btn-lg disabled">button</button>
+
+    <button class="btn btn-danger btn-sm">button</button>
+    <button class="btn btn-danger btn-md">button</button>
+    <button class="btn btn-danger btn-lg">button</button>
+    <button class="btn btn-danger btn-lg active">button</button>
+    <button class="btn btn-danger btn-lg disabled">button</button>
+
+    <button class="btn btn-warning btn-sm">button</button>
+    <button class="btn btn-warning btn-md">button</button>
+    <button class="btn btn-warning btn-lg">button</button>
+    <button class="btn btn-warning btn-lg active">button</button>
+    <button class="btn btn-warning btn-lg disabled">button</button>
+
+    <div class="my_btn" style="width: 80%; margin: 10px auto;">
+        <button class="btn btn-success btn-block btn-lg">button</button>
+    </div>
+    <div class="my_btn" style="width: 80%; margin: 10px auto;">
+        <button class="btn btn-danger btn-block btn-lg">button</button>
+    </div>
+    <div class="my_btn" style="width: 80%; margin: 10px auto;">
+        <button class="btn btn-warning btn-block btn-lg">button</button>
+    </div>
+
+
+    <!-- TASK 4 -->
+    <form style="padding: 20px; width: 50%; margin: 30px auto;" class="border border-dark">
+        <div class=" form-group">
+            <label class="control-label" for="login">Login</label>
+            <input type="text" name="login" class="form-control" placeholder="Enter login">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Password">
+            <p class="help-block">Пример строки с подсказкой</p>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input">
+            <label class="form-check-label">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <!-- TASK 5 -->
+    <div style="width: 70%; margin: 10px auto;">
+        <div class="lead bg-warning text-light text-right">Lorem, ipsum.</div>
+        <div class="text-light bg-primary text-lowercase">
+            <span class="text-danger">Lipsum</span> dolor sit amet consectetur, adipisicing elit. Tenetur labore enim
+            illum obcaecati! Tenetur
+            voluptatum nihil quis dolores ratione omnis earum, nesciunt culpa repellendus repellat quasi inventore
+            tempore
+            reiciendis optio, quibusdam, ut ipsam? <span class="text-warning">Temporibus</span> ab cumque qui, non sunt
+            asperiores reiciendis hic repellat
+            id
+            similique velit praesentium possimus minima laborum natus incidunt atque sit. <span
+                class="text-primary">Quia</span> quos praesentium ea,
+            expedita
+            inventore corporis laborum culpa ab illum quam <span class="small">saepe voluptatem dolorem ipsam</span>
+            recusandae delectus error
+            doloribus quasi tempora labore qui fugiat itaque exercitationem. Consequatur asperiores repellendus possimus
+            doloribus ab rem ratione eos fuga sit non beatae officiis placeat ex soluta, exercitationem totam?
+        </div>
+        <div class="lead bg-warning text-light text-center">Lorem, ipsum dolor.</div>
+        <div class="text-light bg-success text-center text-uppercase">
+            <span class="text-danger">Lipsum</span> dolor sit amet consectetur, adipisicing elit. Tenetur labore enim
+            illum obcaecati! Tenetur
+            voluptatum nihil quis dolores ratione omnis earum, nesciunt culpa repellendus repellat quasi inventore
+            tempore
+            reiciendis optio, quibusdam, ut ipsam? <span class="text-warning">Temporibus</span> ab cumque qui, non sunt
+            asperiores reiciendis hic repellat
+            id
+            similique velit praesentium possimus minima laborum natus incidunt atque sit. <span
+                class="text-primary">Quia</span> quos praesentium ea,
+            expedita
+            inventore corporis laborum culpa ab illum quam <span class="small">saepe voluptatem dolorem ipsam</span>
+            recusandae delectus error
+            doloribus quasi tempora labore qui fugiat itaque exercitationem. Consequatur asperiores repellendus possimus
+            doloribus ab rem ratione eos fuga sit non beatae officiis placeat ex soluta, exercitationem totam?
+        </div>
+        <div class="lead bg-warning text-light">Ipsum dolor.</div>
+        <div class="text-warning bg-info text-right text-capitalize">
+            <span class="text-danger">Lipsum</span> dolor sit amet consectetur, adipisicing elit. Tenetur labore enim
+            illum obcaecati! Tenetur
+            voluptatum nihil quis dolores ratione omnis earum, nesciunt culpa repellendus repellat quasi inventore
+            tempore
+            reiciendis optio, quibusdam, ut ipsam? <span class="text-warning">Temporibus</span> ab cumque qui, non sunt
+            asperiores reiciendis hic repellat
+            id
+            similique velit praesentium possimus minima laborum natus incidunt atque sit. <span
+                class="text-primary">Quia</span> quos praesentium ea,
+            expedita
+            inventore corporis laborum culpa ab illum quam <span class="small text-light bg-warning">saepe voluptatem
+                dolorem
+                ipsam</span>
+            recusandae delectus error
+            doloribus quasi tempora labore qui fugiat itaque exercitationem. Consequatur asperiores repellendus possimus
+            doloribus ab rem ratione eos fuga sit non beatae officiis placeat ex soluta, exercitationem totam?
+        </div>
+        <code class="lead">Hello, world</code>
+    </div>
+
+    <!-- TASK 6 -->
+    <!-- <div>
+        <img src="img/img.jpg" width="500px" class="img-thumbnail rounded float-right">
+        <img src="img/img.jpg" width="500px" class="img-thumbnail float-right">
+        <img src="img/img.jpg" width="500px" class="img-thumbnail rounded float-right">
+    </div>
+    <br> -->
+
+    <!-- TASK 7 -->
+    <button type="button" class="btn btn-primary">
+        Notifications <span class="badge badge-light">4</span>
+    </button>
+
+    <a href="#" class="text-dark">Онлайн <span class="badge badge-danger">15</span></a>
+
+
+    <div class="dropdown">
+        <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">Выпадающий список
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">HTML</a></li>
+            <li><a class="dropdown-item" href="#">CSS</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">JavaScript</a></li>
+        </ul>
+    </div>
+
+
+    <!-- TASK 8 -->
+    <div class="panel-group" id="collapse-group">
+        <div class="panel panel-default" data-parent="panel-group">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="#el1" data-toggle="collapse">Почему стоит поступать в БГТУ?</a>
+                </h4>
+            </div>
+            <div id="el1">
+                <div class="panel-collapse collapse in">
+                    Современная материально-техническая база ВУЗа позволяет готовить
+                    высококвалифицированных специалистов, востребованных не только в Белар
+                    уси, но и за рубежом. Здесь вы можете увидеть некоторые фотографии наш
+                    его университета и студенческого городка(фотоальбомы обновляются).
+                </div>
+            </div>
+        </div>
+        <div class=" panel panel-default" data-parent="panel-group">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="#el2" data-toggle="collapse">Сколько факультетов в БГТУ?</a>
+                </h4>
+            </div>
+            <div id="el2">
+                <div class="panel-collapse collapse"> Подготовка кадров с высшим образованием осуществляется на восьм
+                    и факультетах университета: лесохозяйственном, технологии и техники ле
+                    сной промышленности, технологии органических веществ, химической техно
+                    логии и техники, инженерно-экономическом, издательского дела и полигра
+                    фии, информационных технологиях и факультете заочного обучения для лес
+                    ного хозяйства, лесозаготовительной, деревообрабатывающей, целлюлознобумажной, электронной,
+                    микробиологической, химической, лесохимической,
+                    машиностроительной, нефтехимической, полиграфической промышленности, д
+                    ля промышленности строительных материалов, медицинских препаратов, для
+                    сферы экологического туризма и природопользования, центров стандартиза
+                    ции и сертификации, организаций редакционно-издательского, экологическ
+                    ого, садово-паркового профиля и других отраслей экономики Республики Б
+                    еларусь. Образовательный процесс осуществляют 628 преподавателей 52 ка
+                    федры, среди них: 62 доктора наук, 395 кандидатов наук, 48 профессоров
+                    и 254 доцента.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default" data-parent="panel-group">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="#el3" data-toggle="collapse">Какие специальности на факультете ИТ?</a>
+                </h4>
+            </div>
+            <div id="el3">
+                <div class="panel-collapse collapse">Факультет ИТ готовит специалистов по 4 специальностям:
+                    1-40 05 01 «Информационные системы и технологии» (выпускающая кафедра
+                    информационных систем и технологий)
+                    1-98 01 03 «Программное обеспечение информационной безопасности мобиль
+                    ных систем» (выпускающая кафедра информационных систем и технологий)
+                    1-40 01 01 «Программное обеспечение информационных технологий» (выпуск
+                    ающая кафедра информационных систем и технологий)
+                    1-47 01 02 «Дизайн электронных и веб-изданий» (выпускающая кафедра инф
+                    ормационных систем и технологий)div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TASK 9 -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Launch demo modal
+        </button>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Заголовок окна</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Текст уведомления
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TASK 10 -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Panel 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Panel 2</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Panels
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Panel 3</a>
+                            <a class="dropdown-item" href="#">Panel 4</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Panel 5</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Panel 6</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+</body>
+
+</html>

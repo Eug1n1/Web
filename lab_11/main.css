@@ -1,0 +1,7 @@
+.img-circle, .img-thumbnail, .img-rounded
+{
+    margin: 10px;
+    border-color: red;
+    border-width: 2px;
+    border-style: solid;
+}

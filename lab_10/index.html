@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="text" class="responseText">
+            <div class="text"></div>
+        </div>
+    </div>
+
+    <script>
+
+        var textArea = document.getElementById('text');
+
+
+        today = new Date();
+        console.log(today.getTime());
+        destDate = new Date("January 1, 2022");
+        console.log(destDate.getTime());
+
+        dayMs = 24 * 60 * 60 * 1000;
+        hourMs = 60 * 60 * 1000;
+
+        daysLeft = Math.round((destDate.getTime() - today.getTime()) / dayMs);
+        hoursLeft = Math.round((destDate.getTime() - today.getTime()) / hourMs);
+        hoursLeft = (daysLeft * 24 - hoursLeft);
+
+        console.log(daysLeft);
+        console.log(hoursLeft);
+
+        dayStr = daysLeft.toString();
+        temp = dayStr.substr(dayStr.length - 1)
+        console.log(temp);
+
+        if (daysLeft > 4 && daysLeft < 21) {
+            day = " дней";
+        }
+        else {
+            if (temp == 1) {
+                day = " день";
+            }
+            else {
+                if (temp == 2 || temp == 3 || temp == 4) {
+                    day = " дня";
+                }
+                else {
+                    day = " дней";
+                }
+            }
+        }
+
+        hourStr = hoursLeft.toString();
+        temp = hourStr.substr(hourStr.length - 1);
+        console.log(temp);
+
+        if (hoursLeft > 4 && hoursLeft < 21) {
+            hour = " часов";
+        }
+        else {
+            if (temp == 1) {
+                hour = " час";
+            }
+            else {
+                if (temp == 2 || temp == 3 || temp == 4) {
+                    hour = " часа";
+                }
+                else {
+                    hour = " часов";
+                }
+            }
+        }
+
+        textArea.innerHTML = daysLeft + day + " " + hoursLeft + hour;
+
+    </script>
+</body>
+
+</html>
